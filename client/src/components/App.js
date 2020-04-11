@@ -1,10 +1,14 @@
 import React from 'react'
+import Navigation from './Navigation/Navigation'
+import Homepage from './Homepage/Homepage'
+import { Background } from './AppStyles.js'
 
 const App = () => {
   return (
-    <div>
-      <h1>REACT</h1>
-    </div>
+    <Background>
+      <Navigation />
+      <Homepage />
+    </Background>
   )
 }
 
