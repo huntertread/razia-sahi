@@ -7,21 +7,21 @@ import {
   NavigationButtonM
 } from './NavigationStyles'
 
-const Navigation = () => {
+const Navigation = ({ view, setView }) => {
   return (
     <div>
       <MediaQuery maxDeviceWidth={500}>
         <NavigationContainerM>
-          <NavigationButtonM href="#">home</NavigationButtonM>
-          <NavigationButtonM href="#">work</NavigationButtonM>
-          <NavigationButtonM href="#">contact</NavigationButtonM>
+          <NavigationButtonM onClick={() => setView('home')} href="#">home</NavigationButtonM>
+          <NavigationButtonM onClick={() => setView('research')} href="#">research</NavigationButtonM>
+          <NavigationButtonM onClick={() => setView('contact')} href="#">contact</NavigationButtonM>
         </NavigationContainerM>
       </MediaQuery>
       <MediaQuery minDeviceWidth={500}>
       <NavigationContainerDT>
-          <NavigationButtonDT href="#">home</NavigationButtonDT>
-          <NavigationButtonDT href="#">work</NavigationButtonDT>
-          <NavigationButtonDT href="#">contact</NavigationButtonDT>
+          <NavigationButtonDT onClick={() => setView('home')} href="#">home</NavigationButtonDT>
+          <NavigationButtonDT onClick={() => setView('research')} href="#">research</NavigationButtonDT>
+          <NavigationButtonDT onClick={() => setView('contact')} href="#">contact</NavigationButtonDT>
         </NavigationContainerDT>
       </MediaQuery>
     </div>

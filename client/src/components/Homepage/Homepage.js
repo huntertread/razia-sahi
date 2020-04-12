@@ -1,10 +1,11 @@
 import React from 'react'
+import { HomepageContainer } from './HomepageStyles.js'
 
 const Homepage = () => {
   return (
-    <div>
+    <HomepageContainer>
       <h1>HOMEPAGE</h1>
-    </div>
+    </HomepageContainer>
   )
 }
 
