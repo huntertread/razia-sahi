@@ -19,8 +19,3 @@ export const NavigationButtonDT = styled.a`
     color: white;
   }
 `
-export const NavigationButtonM = styled.a`
-  font-size: 50px;
-  text-decoration: none;
-  margin: 0px 15px;
-`

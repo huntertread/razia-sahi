@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MediaQuery from 'react-responsive'
+import OpenBurger from './OpenBurger/OpenBurger'
 import {
   NavigationContainerDT,
   NavigationContainerM,
   NavigationButtonDT,
-  NavigationButtonM
 } from './NavigationStyles'
 
-const Navigation = ({ view, setView }) => {
+const Navigation = ({ setView }) => {
+  
+  const [isOpen, setIsOpen] = useState(false)
+
+  let openNav;
+  if (isOpen === false) {
+    openNav = null
+  } else if (isOpen === true) {
+    openNav = <OpenBurger setView={setView} setIsOpen={setIsOpen} isOpen={isOpen}/>
+  }
+
   return (
     <div>
       <MediaQuery maxDeviceWidth={500}>
         <NavigationContainerM>
-          <NavigationButtonM onClick={() => setView('home')} href="#">home</NavigationButtonM>
-          <NavigationButtonM onClick={() => setView('research')} href="#">research</NavigationButtonM>
-          <NavigationButtonM onClick={() => setView('contact')} href="#">contact</NavigationButtonM>
+          <button onClick={() => setIsOpen(!isOpen)}>open nav</button>
+          <i className="fa fa-bars"/>
         </NavigationContainerM>
+        <div>
+          {openNav}
+        </div>
       </MediaQuery>
       <MediaQuery minDeviceWidth={500}>
       <NavigationContainerDT>
