@@ -5,10 +5,11 @@ import {
   NavigationContainerDT,
   NavigationContainerM,
   NavigationButtonDT,
+  MobileHamburgerIcon
 } from './NavigationStyles'
 
 const Navigation = ({ setView }) => {
-  
+
   const [isOpen, setIsOpen] = useState(false)
 
   let openNav;
@@ -22,12 +23,9 @@ const Navigation = ({ setView }) => {
     <div>
       <MediaQuery maxDeviceWidth={500}>
         <NavigationContainerM>
-          <button onClick={() => setIsOpen(!isOpen)}>open nav</button>
-          <i className="fa fa-bars"/>
-        </NavigationContainerM>
-        <div>
+          <MobileHamburgerIcon className="fa fa-bars" onClick={() => setIsOpen(!isOpen)}/>
           {openNav}
-        </div>
+        </NavigationContainerM>
       </MediaQuery>
       <MediaQuery minDeviceWidth={500}>
       <NavigationContainerDT>

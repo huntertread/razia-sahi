@@ -11,6 +11,11 @@ export const NavigationContainerM = styled.div`
   justify-content: flex-end;
 `
 
+export const MobileHamburgerIcon = styled.i`
+  font-size: 60px;
+  margin: 15px;
+`
+
 export const NavigationButtonDT = styled.a`
   font-size: 15px;
   text-decoration: none;
