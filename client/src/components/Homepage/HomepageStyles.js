@@ -1,19 +1,34 @@
 import styled from 'styled-components'
 
-export const HomepageContainer = styled.div`
+export const HomepageContainerDT = styled.div`
   background-color: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  max-width: 900px;
+  margin: auto;
+  min-height: 80vh;
+`
+export const HomepageContainerM = styled.div`
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  // margin: auto;
 `
 export const HomepageH1 = styled.h1`
   font-size: 90px;
+  margin: 0px 0px 50px 0px;
 `
 export const HomepageH2 = styled.h2`
-  font-size: 60px;
+  margin-top: 0px;
+  font-size: 50px;
 `
 export const HomepageP = styled.p`
   margin: 10px 80px;
-  // text-align: left;
+  @media (max-device-width: 500px) {
+    font-size: 40px;
+  }
 `

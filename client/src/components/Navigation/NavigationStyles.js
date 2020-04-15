@@ -4,6 +4,10 @@ export const NavigationContainerDT = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
 `
 export const NavigationContainerM = styled.div`
   display: flex;
@@ -17,10 +21,12 @@ export const MobileHamburgerIcon = styled.i`
 `
 
 export const NavigationButtonDT = styled.a`
-  font-size: 15px;
+  font-size: 25px;
   text-decoration: none;
-  margin: 0px 15px;
+  margin: 10px 30px;
+  color: white;
+  transition: color .2s;
   &:hover {
-    color: white;
+    color: blue;
   }
 `

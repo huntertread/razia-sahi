@@ -28,7 +28,7 @@ const Navigation = ({ setView }) => {
         </NavigationContainerM>
       </MediaQuery>
       <MediaQuery minDeviceWidth={500}>
-      <NavigationContainerDT>
+        <NavigationContainerDT>
           <NavigationButtonDT onClick={() => setView('home')} href="#">home</NavigationButtonDT>
           <NavigationButtonDT onClick={() => setView('research')} href="#">research</NavigationButtonDT>
           <NavigationButtonDT onClick={() => setView('contact')} href="#">contact</NavigationButtonDT>
