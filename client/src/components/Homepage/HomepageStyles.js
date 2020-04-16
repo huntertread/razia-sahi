@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const HomepageContainerDT = styled.div`
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   max-width: 900px;
-  margin: auto;
+  margin: 80px auto;
   min-height: 80vh;
 `
 export const HomepageContainerM = styled.div`
